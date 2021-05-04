@@ -31,7 +31,6 @@
 <img src="http://www.marvinrusinek.com/portfolio-projects/devchallenges-windbnb.png" align="center">
 
 - Live demo can be found here: https://devchallenges-windbnb-ebon.vercel.app
-- The webpage was relatively easy to develop using Angular framework.
 - I used Angular 11, HTML5 and CSS3 (SCSS, CSS Grid, and Flexbox) to create the webpage.
 
 ### Built With
