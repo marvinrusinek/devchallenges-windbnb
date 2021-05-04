@@ -1,0 +1,363 @@
+@import "../../styles/variables";
+
+@media screen and (min-width: 601px) {
+  .search-bar {
+    width: 100%;
+    background-color: $white;
+    height: 400px;
+  }
+
+  .big-btn-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $white;
+    height: 55px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 16px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .results-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $white;
+    height: 55px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .item-placeholder {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .input-wrapper {
+    display: grid;
+    background-color: $white;
+    width: 426px;
+    height: 55px;
+    border-radius: 16px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
+  }
+
+  .input-wrapper-inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+  }
+
+  .hover {
+    &:hover {
+      border: 3px solid $dark-gray;
+      border-radius: 16px;
+    }
+  }
+
+  .label {
+    font: 800 14px "Mulish", sans-serif;
+    margin-top: 7px;
+  }
+
+  .label-grey-mulish-400 {
+    font: 400 14px "Mulish", sans-serif;
+    color: $silver;
+  }
+
+  .label-mulish-700 {
+    font: 700 14px "Mulish", sans-serif;
+    margin-top: 7px;
+  }
+
+  .search-heading-label {
+    text-transform: uppercase;
+  }
+
+  input {
+    font: 500 14px "Mulish", sans-serif;
+    background-color: $white;
+    border: none;
+  }
+
+  .no-outline:focus {
+    outline: none;
+  }
+
+  .btn {
+    width: 127px;
+    height: 48px;
+    background-color: $flamingo;
+    border: none;
+    border-radius: 16px;
+    font: 500 17px "Mulish", sans-serif;
+    color: $white;
+  }
+
+  .center {
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .stack-top {
+    z-index: 9;
+  }
+
+  .location-results {
+    margin-top: 42px;
+  }
+
+  ul li {
+    font: 400 14px "Mulish", sans-serif;
+    margin-bottom: 32px;
+    list-style-type: none;
+  }
+
+  .result-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3px;
+  }
+
+  .adder {
+    display: grid;
+    grid-template-columns: 24px 30px 24px;
+  }
+
+  .label-count {
+    justify-self: center;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .btn-grid {
+    display: grid;
+    grid-template-columns: 24px 60px;
+    grid-column-gap: 5px;
+  }
+
+  .btn-center {
+    align-items: center;
+  }
+
+  .btn-items-center {
+    justify-content: center;
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 15px 1fr;
+  }
+
+  .location-name {
+    align-content: center;
+    align-self: center;
+    margin-left: 10px;
+    color: $light-black !important;
+  }
+
+  .btn-section {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .mobile-section {
+    visibility: hidden;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #add-location {
+    border-bottom: 1px solid $very-light-gray;
+  }
+
+  .search-bar {
+    width: 100%;
+    background-color: $white;
+    height: 600px;
+    top: 0;
+  }
+
+  .mobile-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 40px;
+    font: 700 15px "Mulish", sans-serif;
+    color: $gray-black;
+  }
+
+  .big-btn-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 90px;
+    border: 1px solid $silver;
+    border-radius: 16px;
+  }
+
+  .results-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: $white;
+    height: 55px;
+  }
+
+  .item-placeholder {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .input-wrapper {
+    display: grid;
+    background-color: $white;
+    width: 426px;
+    height: 55px;
+    border-radius: 16px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
+  }
+
+  .input-wrapper-inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 22px;
+  }
+
+  .label {
+    font: 800 14px "Mulish", sans-serif;
+    margin-top: 7px;
+  }
+
+  .label-grey-mulish-400 {
+    font: 400 14px "Mulish", sans-serif;
+    color: $silver;
+  }
+
+  .label-mulish-700 {
+    font: 700 14px "Mulish", sans-serif;
+    margin-top: 7px;
+  }
+
+  input {
+    font: 500 14px "Mulish", sans-serif;
+    background-color: $white;
+    border: none;
+  }
+
+  .no-outline:focus {
+    outline: none;
+  }
+
+  .btn {
+    width: 127px;
+    height: 48px;
+    font: 500 17px "Mulish", sans-serif;
+    color: $white;
+    background-color: $flamingo;
+    border: none;
+    border-radius: 16px;
+  }
+
+  .center {
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .stack-top {
+    z-index: 9;
+  }
+
+  .location-results {
+    margin-top: 42px;
+  }
+
+  ul li {
+    list-style-type: none;
+    font: 400 32px "Mulish", sans-serif;
+    margin-bottom: 32px;
+  }
+
+  .result-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3px;
+  }
+
+  .adder {
+    display: grid;
+    grid-template-columns: 24px 30px 24px;
+  }
+
+  .label-count {
+    justify-self: center;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .btn-grid {
+    display: grid;
+    grid-template-columns: 24px 60px;
+    grid-column-gap: 5px;
+  }
+
+  .btn-center {
+    align-items: center;
+  }
+
+  .btn-items-center {
+    justify-content: center;
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 15px 1fr;
+  }
+
+  .location-name {
+    align-content: center;
+    align-self: center;
+    margin-left: 10px;
+    color: $light-black !important;
+  }
+
+  .btn-section {
+    justify-self: center;
+    align-self: end;
+    margin-top: 300px;
+  }
+}
+
+
+.show-location,
+.show-guests {
+  border-right: 1px solid $very-light-gray;
+}
+
+.show-location-wrapper,
+.show-guests-wrapper,
+.add-guests-wrapper {
+  margin-left: 30px;
+}
+
+.children-wrapper {
+  margin-top: 20px;
+}
+
+.mobile-section {
+  .edit-search {
+    justify-self: start;
+  }
+
+  .edit-close-button {
+    justify-self: end;
+  }
+}
+
+.add-adult, .remove-adult,
+.add-child, .remove-child {
+  margin-top: 3px;
+}

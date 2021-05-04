@@ -1,0 +1,14 @@
+<main class="container body">
+  <div *ngIf="searching" class="box stack-top">
+    <app-search (searchCriteriaOut)="setSearching($event)"></app-search>
+  </div>
+
+  <app-header [searchedValue]="searchCriteria.searchedValue" (search)="switch($event)" *ngIf="!searching"></app-header>
+
+  <section>
+    <div *ngIf="searching" class="base-class"></div>
+    <app-stay-list [searchCriteria]="searchCriteria"></app-stay-list>
+    <app-footer></app-footer>
+  </section>
+</main>
+

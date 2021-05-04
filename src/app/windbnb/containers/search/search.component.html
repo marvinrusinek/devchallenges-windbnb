@@ -1,0 +1,74 @@
+<div class="search-bar">
+  <div class="mobile-section">
+    <span class="edit-search">Edit your search</span>
+    <div class="edit-close-button" (click)="search()">X</div>
+  </div>
+  <div id="search" class="big-btn-wrapper">
+    <div id="add-location" class="show-location hover" (click)="showLocation()">
+      <div class="label item-placeholder show-location-wrapper">
+        <label class="search-heading-label">Location</label>
+        <input [(ngModel)]="searchValue" type="text" placeholder="Add location" class="no-outline" />
+      </div>
+    </div>
+    <div class="show-guests hover" (click)="showGuests()">
+      <div class="label item-placeholder show-guests-wrapper">
+        <label class="search-heading-label">Guests</label>
+        <label class="label-grey-mulish-400" *ngIf="Guest.showTotal() <= 0">Add guests</label>
+        <label class="label-grey-mulish-400" *ngIf="Guest.showTotal() >= 1">{{ Guest.showTotal() }}</label>
+      </div>
+    </div>
+    <div class="btn-section">
+      <div id="btn-search">
+        <div (click)="search()">
+          <div class="btn-center btn-grid btn btn-items-center">
+            <img src="assets/images/magnify.png" loading="lazy" alt="magnify" />
+            <label><strong>Search</strong></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="results" class="results-wrapper">
+    <div>
+      <div class="location-results" *ngIf="locationResults">
+        <ul>
+          <li *ngFor="let location of locations; let i = index" class="location-grid" (click)="selectLocationForSearch(i)">
+            <img src="assets/images/map-marker.png" loading="lazy" alt="map marker" />
+            <span class="location-name label-grey-mulish-400">{{ location }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="guestCalc" id="add-guest-toolbox" class="add-guests-wrapper location-results">
+        <div id="adults" class="result-wrapper">
+          <label class="label">Adults</label>
+          <label class="label-grey-mulish-400">Ages 13 or above</label>
+          <div id="add-adults" class="adder">
+            <div class="remove-adult" (click)="Guest.removeAdult()">
+              <img src="assets/images/minus-box-outline.png" loading="lazy" alt="minus one box" />
+            </div>
+            <label class="label-mulish-700 label-count">{{ Guest.adults }}</label>
+            <div class="add-adult" (click)="Guest.addAdult()">
+              <img src="assets/images/plus-box-outline.png" loading="lazy" alt="plus one box" />
+            </div>
+          </div>
+        </div>
+        <div id="children" class="children-wrapper result-wrapper">
+          <label class="label">Children</label>
+          <label class="label-grey-mulish-400">Ages 2-12</label>
+          <div id="add-child" class="adder">
+            <div class="remove-child" (click)="Guest.removeChild()">
+              <img src="assets/images/minus-box-outline.png" loading="lazy" alt="minus one box" />
+            </div>
+            <label class="label-mulish-700 label-count">{{ Guest.children }}</label>
+            <div class="add-child" (click)="Guest.addChild()">
+              <img src="assets/images/plus-box-outline.png" loading="lazy" alt="plus one box" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

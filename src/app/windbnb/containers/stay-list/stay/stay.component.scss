@@ -1,0 +1,114 @@
+@import "../../../styles/variables";
+
+.stay__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+
+  .stay__card {
+    @media screen and (max-width: 600px) {
+      padding-bottom: 40px;
+    }
+
+    .stay__photo {
+      border-radius: 24px;
+
+      img {
+        width: 395px;
+        height: 269px;
+        border-radius: 24px;
+        transition: 1s ease-in-out;
+
+        @media screen and (max-width: 600px) {
+          width: 440px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: .5s ease-in-out;
+        }
+      }
+    }
+
+    .super-host-wrapper {
+      display: grid;
+      grid-template-columns: 100px 220px 60px;
+      grid-column-gap: 10px;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 100px 260px 60px;
+      }
+    }
+
+    .no-super-host-wrapper {
+      display: grid;
+      grid-template-columns: 330px 50px;
+      grid-column-gap: 10px;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 370px 50px;
+      }
+    }
+
+    .stay__info {
+      display: flex;
+      flex-direction: column;
+
+      .stay__info__first__line {
+        margin-top: 15px;
+        margin-left: 0;
+        padding-bottom: 10px;
+
+        .super-host {
+          font: 700 12px "Montserrat", sans-serif;
+          color: $light-black;
+          border: 1px solid $light-black;
+          border-radius: 12px;
+          box-sizing: border-box;
+          text-transform: uppercase;
+          padding: 5px;
+          margin-top: -3px;
+          width: 95px;
+        }
+
+        .stay__type__beds {
+          font: 500 14px "Montserrat", sans-serif;
+          color: $battleship-gray;
+          width: 100%;
+        }
+
+        .star {
+          display: grid;
+          grid-template-columns: 16px 32px;
+          grid-column-gap: 7px;
+          align-self: end;
+          position: relative;
+          bottom: 5px;
+          right: 0;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+
+          span {
+            font: 500 14px "Montserrat", sans-serif;
+            color: $light-black;
+            vertical-align: top;
+          }
+        }
+      }
+
+      .stay__info__second__line {
+        font: 600 16px "Montserrat", sans-serif;
+        color: $gray-black;
+        margin-left: 5px;
+      }
+
+      .align-description {
+        margin-left: 0;
+      }
+    }
+  }
+}

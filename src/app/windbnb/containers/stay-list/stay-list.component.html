@@ -1,0 +1,14 @@
+<section class="stay__list__container">
+  <div class="stay__list__header">
+    <h2 class="stays__title">
+      Stays in {{ searchCriteria.searchedValue === '' ? 'Finland' : searchCriteria.searchedValue }}
+    </h2>
+    <span class="stays__count">{{ staysArr.length >= 12 ? '12+' : stays }} stays</span>
+  </div>
+  <div id="stays" class="stays__wrapper">
+    <app-stay *ngFor="let stays of staysArr; let i = index" [index]="i"></app-stay>
+  </div>
+</section>
+
+
+

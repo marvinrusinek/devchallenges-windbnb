@@ -1,0 +1,23 @@
+<div class="stay__list">
+  <div class="stay__card">
+    <div class="stay__photo">
+      <img [src]="image" loading="lazy" alt="photo" [title]="title" />
+    </div>
+    <div class="stay__info">
+      <div class="stay__info__first__line">
+        <div [ngClass]="superHost ? 'super-host-wrapper' : 'no-super-host-wrapper'">
+          <div *ngIf="superHost" class="super-host">Super Host</div>
+          <div class="stay__type__beds">{{ type }}
+            <span *ngIf="beds !== null">.&nbsp;{{ beds }} {{ beds === 1 ? 'bed' : 'beds' }}</span>
+          </div>
+          <div class="star">
+            <img src="assets/images/star.png" loading="lazy" alt="star" />
+            <span>{{ rating }}</span>
+          </div>
+        </div>
+      </div>
+      <span class="stay__info__second__line"
+            [ngClass]="!superHost ? 'align-description' : 'no-align'">{{ title }}</span>
+    </div>
+  </div>
+</div>

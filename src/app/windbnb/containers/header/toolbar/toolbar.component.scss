@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.toolbar {
+  width: 270px;
+  height: 55px;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  margin-top: -20px;
+  margin-right: 100px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 120px 100px 50px;
+  background-color: $white;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 14px "Mulish", sans-serif;
+  color: $black;
+}
+
+.add {
+  color: $silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 14px "Mulish", sans-serif;
+}
+
+.loop-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  border-right: 1px solid $silver;
+
+  span {
+    text-align: center;
+  }
+}
